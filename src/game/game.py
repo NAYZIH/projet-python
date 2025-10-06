@@ -1,4 +1,5 @@
 import random
+from colorama import Fore, Style
 
 def game():
     choix_possibles = ["pierre", "feuille", "ciseaux"]
@@ -7,23 +8,23 @@ def game():
     egalites = 0
     
     while True:
-        joueur = input("Choisis : pierre, feuille ou ciseaux (stop pour quitter) \n ").lower().strip()
+        joueur = input(Fore.CYAN + "Choisis : pierre, feuille ou ciseaux (stop pour quitter) \n" + Style.RESET_ALL).lower().strip()
         if joueur == "stop":
             break
         if joueur not in choix_possibles:
-            print("Choix invalide, réessaie. \n")
+            print(Fore.CYAN + "Choix invalide, réessaie. \n" + Style.RESET_ALL)
             continue
         
         ordi = random.choice(choix_possibles)
-        print("L'adversaire a choisi", ordi + "\n")
+        print(Fore.CYAN + "L'adversaire a choisi", ordi + "\n" + Style.RESET_ALL)
         
         if joueur == ordi:
-            print("Égalité ! \n")
+            print(Fore.YELLOW + "Égalité ! \n" + Style.RESET_ALL)
             egalites += 1
         elif (joueur == "pierre" and ordi == "ciseaux") or (joueur == "feuille" and ordi == "pierre") or (joueur == "ciseaux" and ordi == "feuille"):
-            print("Tu gagnes ! \n")
+            print(Fore.GREEN + "Tu gagnes ! \n" + Style.RESET_ALL)
             victoires += 1
         else:
-            print("Tu perds ! \n")
+            print(Fore.RED + "Tu perds ! \n" + Style.RESET_ALL)
             defaites += 1
-        print(f"Score actuel : {victoires} victoire(s), {defaites} défaite(s), {egalites} égalité(s).\n")
+        print(Fore.CYAN + f"Score actuel : {victoires} victoire(s), {defaites} défaite(s), {egalites} égalité(s).\n" + Style.RESET_ALL)
