@@ -12,7 +12,7 @@ def game():
         if joueur == "stop":
             break
         if joueur not in choix_possibles:
-            print(Fore.CYAN + "Choix invalide, réessaie. \n" + Style.RESET_ALL)
+            print(Fore.RED + "Choix invalide, réessaie. \n" + Style.RESET_ALL)
             continue
         
         ordi = random.choice(choix_possibles)
