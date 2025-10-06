@@ -8,7 +8,7 @@ def game():
     egalites = 0
     
     while True:
-        joueur = input(Fore.CYAN + "Choisis : pierre, feuille ou ciseaux (stop pour quitter) \n" + Style.RESET_ALL).lower().strip()
+        joueur = input(Fore.YELLOW + "Choisis : pierre, feuille ou ciseaux (stop pour quitter) \n" + Style.RESET_ALL).lower().strip()
         if joueur == "stop":
             break
         if joueur not in choix_possibles:
@@ -22,7 +22,7 @@ def game():
             print(Fore.YELLOW + "Égalité ! \n" + Style.RESET_ALL)
             egalites += 1
         elif (joueur == "pierre" and ordi == "ciseaux") or (joueur == "feuille" and ordi == "pierre") or (joueur == "ciseaux" and ordi == "feuille"):
-            print(Fore.GREEN + "Tu gagnes ! \n" + Style.RESET_ALL)
+            print(Fore.LIGHTGREEN_EX + "Tu gagnes ! \n" + Style.RESET_ALL)
             victoires += 1
         else:
             print(Fore.RED + "Tu perds ! \n" + Style.RESET_ALL)
