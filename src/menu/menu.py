@@ -1,7 +1,7 @@
 import sys
 from src.game import game
 from colorama import Fore, Style
-
+from src.clear import clear
 
 def afficher_regles():
     print(Fore.CYAN + "\n=== RÈGLES DU JEU ===" + Style.RESET_ALL)
@@ -22,6 +22,7 @@ def menu():
         print(Fore.YELLOW + "3. Quitter" + Style.RESET_ALL)
         
         choix = input(Fore.CYAN + "Choisis une option : " + Style.RESET_ALL).strip()
+        clear.clear()
 
         if choix == "1":
             game.game()  

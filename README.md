@@ -20,6 +20,8 @@ nayzih-projet-python/
 ├── README.md                     # Documentation du projet
 ├── main.py                       # Point d'entrée du programme
 └── src/
+    ├── clear/
+    │   └── clear.py              # Contient la fonction clear() pour nettoyer le terminal
     ├── game/
     │   └── game.py               # Logique principale du jeu (Pierre-Feuille-Ciseaux)
     └── menu/
