@@ -30,9 +30,9 @@ nayzih-projet-python/
 
 ### Menu interactif
 L’utilisateur accède à un menu simple et clair lui permettant de :
-- **1. Jouer à Pierre-Feuille-Ciseaux**
-- **2. Afficher les règles du jeu**
-- **3. Quitter**
+- **Jouer à Pierre-Feuille-Ciseaux**
+- **Afficher les règles du jeu**
+- **Quitter**
 
 ### Partie de jeu
 Lorsqu’une partie est lancée :
